@@ -1,0 +1,42 @@
+- title: Getting Started
+  docs:
+  - home
+  - quickstart
+  - installation
+  - usage
+  - structure
+  - configuration
+
+- title: API
+  docs:
+  - app-main
+  - datamodel
+  - init
+  - StandaloneApp
+  - workbench
+
+- title: Your Content
+  docs:
+  - collections
+  - datafiles
+  - migrations
+
+- title: Customization
+  docs:
+  - extras
+
+- title: Deployment
+  docs:
+  - deployment-methods
+
+- title: Development
+  docs:
+  - contributing
+  - continuous-integration
+  - troubleshooting
+
+- title: Meta
+  docs:
+  - resources
+  - upgrading
+  - history
