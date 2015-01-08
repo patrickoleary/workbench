@@ -29,6 +29,12 @@ module.exports = function (grunt) {
                     'node_modules/bootstrap/dist/css/bootstrap.min.css'],
                 dest: 'dist/css/'
             },
+            dist: {
+                expand: true,
+                flatten: false,
+                src: ['dist/**'],
+                dest: 'examples/dist/'
+            },
             fonts: {
                 expand: true,
                 flatten: true,
@@ -157,8 +163,7 @@ module.exports = function (grunt) {
                 files: {
                     'dist/lib/workbench.app.min.js': [
                         'dist/lib/workbench.app.templates.js',
-                        'src/js/app/**/*.js',
-                        'src/js/app-main.js'
+                        'src/js/app/**/*.js'
                     ]
                 }
             },
@@ -194,7 +199,7 @@ module.exports = function (grunt) {
                 tasks: ['stylus:lib']
             },
             js_app: {
-                files: ['src/js/app/**/*.js', 'src/js/app-main.js'],
+                files: ['src/js/app/**/*.js'],
                 tasks: ['uglify:app']
             },
             js_lib: {
@@ -264,6 +269,7 @@ module.exports = function (grunt) {
     grunt.registerTask('init', ['copy:ext', 'copy:fonts', 'extend', 'uglify:ext', 'index-html']);
     grunt.registerTask('default', ['stylus', 'build-js']);
     grunt.registerTask('doc', ['doxx', 'jsdox:generate']);
+    grunt.registerTask('examples', ['copy:dist']);
     grunt.registerTask('test', ['jshint', 'connect', 'exec:jasmine']);
 
 };

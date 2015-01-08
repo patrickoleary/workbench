@@ -1,5 +1,5 @@
 /**
- * The app-main.js file is imported last.
+ * The StandaloneApp-main.js file is imported last.
  */
 
 /**
