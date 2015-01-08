@@ -33,7 +33,7 @@ module.exports = function (grunt) {
                 expand: true,
                 flatten: false,
                 src: ['dist/**'],
-                dest: 'examples/dist/'
+                dest: 'examples/'
             },
             fonts: {
                 expand: true,
@@ -49,7 +49,7 @@ module.exports = function (grunt) {
                 target: 'docs',
                 options: {
                     title: 'Workbench',
-                    ignore: 'index.html.jade,stylesheets,templates'
+                    ignore: 'stylesheets,templates'
                 }
             }
         },
@@ -213,10 +213,6 @@ module.exports = function (grunt) {
             jade_lib: {
                 files: ['src/templates/lib/**/*.jade'],
                 tasks: ['jade:lib', 'uglify:lib']
-            },
-            index_html: {
-                files: ['src/templates/index.html.jade'],
-                tasks: ['index-html']
             }
         }
 
@@ -235,30 +231,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-extend');
     grunt.loadNpmTasks('grunt-jsdox');
 
-    grunt.registerTask('index-html', 'Build the index.html page.', function () {
-        var buffer = fs.readFileSync('src/index.html.jade');
-        var config = grunt.file.readJSON('config.json');
-
-        var fn = jade.compile(buffer, {
-            client: false,
-            pretty: true
-        });
-        fs.writeFileSync('dist/index.html', fn({
-            cssFiles: [
-                'css/font-awesome.min.css',
-                'css/bootstrap.min.css',
-                'css/workbench.min.css',
-                'css/workbench.app.min.css'
-            ],
-            jsFiles: [
-                'lib/workbench.ext.min.js',
-                'lib/workbench.min.js',
-                'lib/workbench.app.min.js'
-            ],
-            config: config
-        }));
-    });
-
     grunt.registerTask(
         'serve',
         'Serve the content at http://localhost:8081, ' +
@@ -266,7 +238,7 @@ module.exports = function (grunt) {
         ['express', 'watch']
     );
     grunt.registerTask('build-js', ['jade', 'uglify:app', 'uglify:lib']);
-    grunt.registerTask('init', ['copy:ext', 'copy:fonts', 'extend', 'uglify:ext', 'index-html']);
+    grunt.registerTask('init', ['copy:ext', 'copy:fonts', 'extend', 'uglify:ext']);
     grunt.registerTask('default', ['stylus', 'build-js']);
     grunt.registerTask('doc', ['doxx', 'jsdox:generate']);
     grunt.registerTask('examples', ['copy:dist']);
