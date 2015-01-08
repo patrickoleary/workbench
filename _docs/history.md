@@ -2,7 +2,7 @@
 layout: docs
 title: History
 permalink: "/docs/history/"
-prev_section: contributing
+prev_section: upgrading
 ---
 
 ## 0.0.1 / 2015-01-06
