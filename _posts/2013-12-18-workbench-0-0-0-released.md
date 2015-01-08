@@ -7,6 +7,6 @@ version: 0.0.0
 categories: [release]
 ---
 
-Birthday!
+Birthday! [history]
 
 [history]: {{ site.baseurl }}/docs/history/#v0-0-0
