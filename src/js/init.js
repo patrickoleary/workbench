@@ -17,3 +17,12 @@ if (!window.console) {
         error: function () {}
     };
 }
+
+/**
+ * This is the namespace for the core classes contained in workbench.
+ *
+ * @namespace {workbench}
+ */
+
+/*jshint -W079 */
+var workbench = workbench || {};

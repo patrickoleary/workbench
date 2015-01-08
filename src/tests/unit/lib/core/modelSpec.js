@@ -2,8 +2,10 @@ define(['jasmine',
         'jasmine-html',
         'bean',
         'extendjs',
+        'qwery',
         'reqwest',
-        'src/js/lib/core/workbench'], function() {
+        'src/js/init',
+        'src/js/lib/core/model'], function() {
         'use strict';
 
         describe('workbench.Model unit tests', function() {

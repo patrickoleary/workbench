@@ -8,7 +8,9 @@
   "predef": [
     "workbench",
     "StandaloneApp",
+    "bean",
     "Class",
+    "qwery",
     "reqwest"
   ],
   "globals": {

@@ -48,6 +48,17 @@ module.exports = function (grunt) {
             }
         },
 
+        jsdox: {
+            generate: {
+                options: {
+                    contentsTitle: 'Workbench API Documentation'
+                },
+
+                src: ['src/js/app/**/*.js', 'src/js/lib/**/*.js', 'src/js/*.js'],
+                dest: 'docs/markdown'
+            }
+        },
+
         express: {
             server: {
                 options: {
@@ -217,6 +228,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-express');
     grunt.loadNpmTasks('grunt-extend');
+    grunt.loadNpmTasks('grunt-jsdox');
 
     grunt.registerTask('index-html', 'Build the index.html page.', function () {
         var buffer = fs.readFileSync('src/index.html.jade');
@@ -251,7 +263,7 @@ module.exports = function (grunt) {
     grunt.registerTask('build-js', ['jade', 'uglify:app', 'uglify:lib']);
     grunt.registerTask('init', ['copy:ext', 'copy:fonts', 'extend', 'uglify:ext', 'index-html']);
     grunt.registerTask('default', ['stylus', 'build-js']);
-    grunt.registerTask('doc', ['doxx']);
+    grunt.registerTask('doc', ['doxx', 'jsdox:generate']);
     grunt.registerTask('test', ['jshint', 'connect', 'exec:jasmine']);
 
 };

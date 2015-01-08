@@ -22,6 +22,7 @@
     "grunt-doxx": "*",
     "grunt-exec": "*",
     "grunt-extend": "*",
+    "grunt-jsdox": "*",
     "jade": "~1.8.2",
     "jasmine-core": "*",
     "jshint": "~2.5.11",
