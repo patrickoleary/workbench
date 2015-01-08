@@ -18,5 +18,5 @@ here are the highlights (thanks to [@patrickoleary](http://github.com/patrickole
 
 Take a look at the [Upgrading][] page in the docs for more detailed information.
 
-[history]: /docs/history/#v0-0-1
-[Upgrading]: /docs/upgrading/
+[history]: {{ site.baseurl }}/docs/history/#v0-0-1
+[Upgrading]: {{ site.baseurl }}/docs/upgrading/

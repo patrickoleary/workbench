@@ -13,8 +13,8 @@ permalink: /feed.xml
   >
   <channel>
     <title xml:lang="en">Workbench • Simple, Fast, Visualization</title>
-    <atom:link type="application/atom+xml" href="http://patrickoleary.github.io/workbench/feed.xml" rel="self"/>
-    <link>http://workbench.com/</link>
+    <atom:link type="application/atom+xml" href="{{ site.baseurl }}/feed.xml" rel="self"/>
+    <link>{{ site.baseurl }}</link>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <language>en-US</language>
@@ -22,9 +22,9 @@ permalink: /feed.xml
     <description>Transform your data into analysis and visualizations.</description>
     <image>
       <description>Transform your data into analysis and visualizations.</description>
-      <url>http://workbench.com/img/logo-rss.png</url>
+      <url>{{ site.baseurl }}/img/logo-rss.png</url>
       <title>Workbench • Simple, Fast, Visualization</title>
-      <link>http://workbench.com/</link>
+      <link>{{ site.baseurl }}</link>
       <width>144</width>
       <height>73</height>
     </image>

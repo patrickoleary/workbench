@@ -9,4 +9,4 @@ categories: [release]
 
 Birthday!
 
-[history]: /docs/history/#v0-0-0
+[history]: {{ site.baseurl }}/docs/history/#v0-0-0

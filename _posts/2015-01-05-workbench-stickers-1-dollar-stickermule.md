@@ -6,7 +6,7 @@ author: patrickoleary
 categories: [partners]
 ---
 
-![Workbench Sticker](/img/workbench.png)
+![Workbench Sticker]({{ site.baseurl }}/img/workbench.png)
 
 You may have heard that [@patrickoleary](https://github.com/patrickoleary)'s excellent
 Workbench logo has been made into a sticker. You may have sat idly by, wishing
