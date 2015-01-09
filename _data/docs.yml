@@ -7,13 +7,17 @@
   - structure
   - configuration
 
-- title: API
+- title: app
   docs:
-  - app-main
-  - datamodel
-  - init
+  - DivApp
   - StandaloneApp
-  - workbench
+  - init
+
+- title: lib
+  docs:
+  - application
+  - model
+  - datamodel
 
 - title: Your Content
   docs:

@@ -1,8 +1,8 @@
 ---
 layout: docs
 title: StandaloneApp.js
-prev_section: init
-next_section: workbench
+prev_section: DivApp
+next_section: init
 permalink: /docs/StandaloneApp/
 ---
 
@@ -69,13 +69,3 @@ modelReady an event handler for notification of when the data model is available
 
 
 * * *
-
-
-
-
-
-
-
-
-
-

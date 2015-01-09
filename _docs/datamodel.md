@@ -1,8 +1,8 @@
 ---
 layout: docs
 title: datamodel.js
-prev_section: app-main
-next_section: init
+prev_section: model
+next_section: collections
 permalink: /docs/datamodel/
 ---
 
@@ -56,13 +56,3 @@ getFilePattern for workbench.Model.DataModel class.
 
 
 * * *
-
-
-
-
-
-
-
-
-
-
