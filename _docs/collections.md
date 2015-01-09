@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Collections
-prev_section: workbench
+prev_section: datamodel
 next_section: datafiles
 permalink: /docs/collections/
 ---
